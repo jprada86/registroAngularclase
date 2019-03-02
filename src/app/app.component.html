@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<form [formGroup]="exampleForm">
+  <div class="example-container">
+    <mat-form-field>
+      <input formControlName="nombre" name="nombre" matInput placeholder="Nombre">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea formControlName="apellido" name="apellido" id="apellido" matInput placeholder="Apellido"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select formControlName="tdocu" name="tdocu" id="tdocu" placeholder="Tipo documento">
+        <mat-option value="Cedula">Cedula</mat-option>
+        <mat-option value="DNI">DNI</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea formControlName="numero" name="numero" id="numero" matInput placeholder="Numero"></textarea>
+    </mat-form-field>
+
+    <div class="example-button-row">
+      <button (click)="mostrarDatos($event)" mat-raised-button color="primary">Enviar</button>
+    </div>
+
+  </div>
+
+</form>
+
+
+<router-outlet></router-outlet>
